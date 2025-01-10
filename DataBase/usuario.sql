@@ -1,0 +1,9 @@
+ALTER SESSION SET "_oracle_script"=TRUE;
+
+CREATE USER usuariopdt IDENTIFIED BY usuariopdt DEFAULT TABLESPACE USERS;
+
+GRANT DBA TO usuariopdt;
+
+GRANT CONNECT TO usuariopdt;
+
+GRANT ALL PRIVILEGES TO usuariopdt;
