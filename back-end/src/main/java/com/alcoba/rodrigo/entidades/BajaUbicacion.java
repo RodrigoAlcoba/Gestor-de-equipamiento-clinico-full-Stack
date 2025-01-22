@@ -3,9 +3,11 @@ package com.alcoba.rodrigo.entidades;
 import com.alcoba.rodrigo.entidades.pkcompuestas.BajaUbicacionPK;
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
 @Entity
 @Table(name = "BAJA_UBICACIONES")
-public class BajaUbicacion {
+public class BajaUbicacion implements Serializable {
 
     @EmbeddedId
     private BajaUbicacionPK id;

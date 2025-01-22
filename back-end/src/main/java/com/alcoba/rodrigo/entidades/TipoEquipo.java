@@ -2,9 +2,11 @@ package com.alcoba.rodrigo.entidades;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
 @Entity
 @Table(name = "TIPOS_EQUIPO")
-public class TipoEquipo {
+public class TipoEquipo implements Serializable {
 
     @Id
     @Column(name = "id_tipo_equipo")

@@ -2,10 +2,12 @@ package com.alcoba.rodrigo.entidades;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
 
 @Entity
 @Table(name = "PAISES")
-public class Pais {
+public class Pais implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_pais")

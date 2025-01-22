@@ -3,11 +3,12 @@ package com.alcoba.rodrigo.entidades;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 @Table(name = "INTERVENCIONES")
-public class Intervencion {
+public class Intervencion implements Serializable {
 
     @Id
     @Column(name = "id_intervencion")

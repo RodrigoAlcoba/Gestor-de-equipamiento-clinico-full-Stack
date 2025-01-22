@@ -2,9 +2,11 @@ package com.alcoba.rodrigo.entidades;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
 @Entity
 @Table(name = "SECTORES")
-public class Sector {
+public class Sector implements Serializable {
 
     @Id
     @Column(name = "id_sector")

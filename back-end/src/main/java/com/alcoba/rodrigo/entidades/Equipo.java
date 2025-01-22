@@ -3,11 +3,12 @@ package com.alcoba.rodrigo.entidades;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "EQUIPOS")
-public class Equipo {
+public class Equipo implements Serializable {
 
     @Id
     @Column(name = "id_equipo")
@@ -27,6 +28,7 @@ public class Equipo {
     @Column(name = "num_serie", length = 50, nullable = false)
     private String numSerie;
 
+    @Lob
     @Column(name = "imagen", nullable = false)
     private byte[] imagen;
 

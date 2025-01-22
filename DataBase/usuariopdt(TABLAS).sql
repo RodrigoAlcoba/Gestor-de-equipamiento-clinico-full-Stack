@@ -197,8 +197,8 @@ CREATE TABLE INTERVENCIONES (
    id_tipo_intervencion INT NOT NULL,
    FOREIGN KEY (id_usuario) REFERENCES USUARIOS (id_usuario),
    FOREIGN KEY (id_equipo) REFERENCES EQUIPOS (id_equipo),
-   FOREIGN KEY (id_institucion) REFERENCES INSTITUCIONES (id_institucion)
-   FOREIGN KEY (id_tipo_intervencion) REFERENCES TIPOS_INTERVENCION (id_tipo_intervencion);
+   FOREIGN KEY (id_institucion) REFERENCES INSTITUCIONES (id_institucion),
+   FOREIGN KEY (id_tipo_intervencion) REFERENCES TIPOS_INTERVENCION (id_tipo_intervencion)
 ) TABLESPACE USERS;
 
 CREATE OR REPLACE TRIGGER INTERVENCION_ID_TRIGGER

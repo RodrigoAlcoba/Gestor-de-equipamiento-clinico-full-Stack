@@ -6,9 +6,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+import java.io.Serializable;
+
 @Entity
 @Table(name = "ESTADOS")
-public class Estado {
+public class Estado implements Serializable {
 
     @Id
     @Column(name = "id_estado", nullable = false)
@@ -16,6 +18,9 @@ public class Estado {
 
     @Column(name = "nom_estado", nullable = false)
     private String nomEstado;
+
+    public Estado() {
+    }
 
     public int getId() {
         return id;
@@ -31,5 +36,14 @@ public class Estado {
 
     public void setNomEstado(String nomEstado) {
         this.nomEstado = nomEstado;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Estado{" +
+                "id=" + id +
+                ", nomEstado='" + nomEstado + '\'' +
+                '}';
     }
 }
